@@ -1,0 +1,38 @@
+<h1>Editing Mix #<%= @mix.id %></h1>
+
+<%= form_tag(mix_url(@mix), method: 'patch') do %>
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @mix.name, size: 50 %>
+  </div>
+
+  <div>
+    <%= label_tag :url %><br />
+    <%= text_field_tag :url, @mix.url , size: 100 %>
+  </div>
+
+  <div>
+    <%= label_tag :last_modified_string %><br />
+    <%= text_field_tag :last_modified_string, @mix.last_modified_string %>
+  </div>
+
+  <div>
+    <%= label_tag :size %><br />
+    <%= text_field_tag :size, @mix.size %>
+  </div>
+
+  <div>
+    <%= label_tag :event %><br />
+    <%= text_field_tag :event, @mix.event %>
+  </div>
+
+  <div>
+    <%= label_tag :dj_id %><br />
+    <% djs = Dj.all.order("name") %>
+    <%= select_tag "dj_id", options_from_collection_for_select(djs, :id, :name), size: 10 %>
+  </div>
+
+  <div>
+    <%= submit_tag "Update Mix" %>
+  </div>
+<% end %>

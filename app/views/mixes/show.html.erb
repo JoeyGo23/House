@@ -1,0 +1,24 @@
+<h1>Mix #<%= @mix.id %></h1>
+
+<dl>
+  <dt>Name</dt>
+  <dd><%= @mix.name %></dd>
+
+  <dt>Url</dt>
+  <dd><%= link_to @mix.url, @mix.url %></dd>
+  <dd><%= audio_tag("#{@mix.url}", autoplay: true, controls: true) %></dd>
+
+  <dt>Last modified string</dt>
+  <dd><%= @mix.last_modified_string %></dd>
+
+  <dt>Size</dt>
+  <dd><%= @mix.size %></dd>
+
+  <dt>Event</dt>
+  <dd><%= @mix.event %></dd>
+
+  <dt>Dj</dt>
+  <dd><%= Dj.find(@mix.dj_id).name %></dd>
+  
+
+</dl>

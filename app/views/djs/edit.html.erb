@@ -1,0 +1,17 @@
+<h1>Editing Dj #<%= @dj.id %></h1>
+
+<%= form_tag(dj_url(@dj), method: 'patch') do %>
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @dj.name %>
+  </div>
+
+  <div>
+    <%= label_tag :crew %><br />
+    <%= text_field_tag :crew, @dj.crew %>
+  </div>
+
+  <div>
+    <%= submit_tag "Update Dj" %>
+  </div>
+<% end %>

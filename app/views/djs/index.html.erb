@@ -1,0 +1,28 @@
+<h1>Djs</h1>
+
+<p><%= link_to 'Add a New Dj', new_dj_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Crew</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @djs.each do |dj| %>
+    <tr>
+      <td><%= dj.name %></td>
+      <td><%= dj.crew %></td>
+      <td><%= link_to 'Show', dj_url(dj) %></td>
+      <td><%= link_to 'Edit', edit_dj_url(dj) %></td>
+      <td><%= link_to 'Destroy', dj_url(dj), method: 'delete', data: { confirm: "Do you really want to delete this dj?" } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

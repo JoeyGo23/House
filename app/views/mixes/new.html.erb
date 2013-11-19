@@ -1,0 +1,39 @@
+<h1>New Mix</h1>
+
+<%= form_tag(mixes_url, method: 'post') do %>
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, nil, placeholder: "Mix name", size: 80 %>
+  </div>
+
+  <div>
+    <%= label_tag :url %><br />
+    <%= text_field_tag :url, nil, placeholder: "Url", size: 80 %>
+  </div>
+
+  <div>
+    <%= label_tag :last_modified %><br />
+    <%= text_field_tag :last_modified_string, nil, placeholder: "04-Oct-2013" %>
+  </div>
+
+  <div>
+    <%= label_tag :size %><br />
+    <%= text_field_tag :size, nil, placeholder: "140M" %>
+  </div>
+
+  <div>
+    <%= label_tag :event %><br />
+    <%= text_field_tag :event, nil, placeholder: "RK13" %>
+  </div>
+
+  <div>
+    <%= label_tag :dj_id %><br />
+    <% djs = Dj.all.order("name") %>
+    <%= select_tag "dj_id", options_from_collection_for_select(djs, :id, :name) %>
+  </div>
+
+
+  <div>
+    <%= submit_tag "Create Mix" %>
+  </div>
+<% end %>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>House</title>
+  <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+   <header>
+      <h1 class="title"><%= link_to "Chicago House Music", root_url %></h1>
+      <nav>
+        <button type="button" class="btn btn-primary"><%= link_to "Djs", djs_url %></button>
+
+         <button type="button" class="btn btn-primary"><%= link_to "Mixes", mixes_url %></button>
+      </nav>
+    </header>
+
+<div class = "container" >
+	<%= yield %>
+</div>
+
+</body>
+</html>
+
+
+ 

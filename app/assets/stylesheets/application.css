@@ -1,0 +1,43 @@
+
+.btn-primary a {
+	color: white;
+}
+
+
+
+body {
+	background-color: darkgray;
+}
+
+nav{
+	background-color: lightgray;
+}
+
+header{
+	background-color: black;
+}
+
+
+/*body {
+  background-color: gray;
+}
+
+.good_game {
+  color: green;
+}
+
+.orange {
+  color: orange;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.its_over {
+  color: red;
+}
+
+.container {
+  text-align: center;
+}*/

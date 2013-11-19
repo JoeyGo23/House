@@ -1,0 +1,44 @@
+<h1>Mixes</h1>
+
+<p><%= link_to 'Add a New Mix', new_mix_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dj</th>
+      <th>Mix</th>
+      <!-- <th>Url</th> -->
+   <!--  <th>Last modified</th>
+      <th>Size</th>  -->
+      <th>Event</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div class="crew_img container">
+      <%= image_tag("freakeasy_logo_words.png", size: "150x50", alt: "FreakEasy") %>
+      <%= image_tag("bad_advice_bears.jpg", size: "50x50", alt: "Bad Advice Bears" ) %>
+      <%= image_tag("illMeasures_banner.jpg", size: "150x50", alt: "iLLMeasures")%>
+      <%= image_tag("CLEVERPILLAR.jpg", size: "100x50", alt: "CleverPillar") %>
+    </div>
+    <div class="container">
+  <% @mixes.each do |mix| %>
+    <tr>
+      <td><%= Dj.find(mix.dj_id).name %></td>
+      <td><%= audio_tag("#{mix.url}", autoplay: false, controls: true) %></td>
+      <!-- <td><%= mix.url %></td> -->
+    <!--   <td><%= mix.last_modified_string %></td>
+      <td><%= mix.size %></td> -->
+      <td><%= mix.event %></td>
+      <td><%= link_to 'Show', mix_url(mix) %></td>
+      <td><%= link_to 'Edit', edit_mix_url(mix) %></td>
+      <td><%= link_to 'Destroy', mix_url(mix), method: 'delete', data: { confirm: "Do you really want to delete this mix?" } %></td>
+    </tr>
+  </div>
+  <% end %>
+  </tbody>
+</table>
+
