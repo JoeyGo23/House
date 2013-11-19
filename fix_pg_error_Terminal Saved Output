@@ -1,0 +1,555 @@
+Last login: Tue Nov 19 13:05:01 on ttys000
+Joes-MacBook-Pro:~ joegomez$ cd code/
+Joes-MacBook-Pro:code joegomez$ cd Heroku_House/
+RVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /Users/joegomez/code/Heroku_House/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+
+Joes-MacBook-Pro:Heroku_House joegomez$ bundle install
+Fetching gem metadata from https://rubygems.org/..........
+Fetching additional metadata from https://rubygems.org/..
+Resolving dependencies...
+Using rake (10.1.0)
+Using i18n (0.6.5)
+Using minitest (4.7.5)
+Using multi_json (1.8.2)
+Using atomic (1.1.14)
+Using thread_safe (0.1.3)
+Using tzinfo (0.3.38)
+Using activesupport (4.0.1)
+Using builder (3.1.4)
+Using erubis (2.7.0)
+Using rack (1.5.2)
+Using rack-test (0.6.2)
+Using actionpack (4.0.1)
+Using mime-types (1.25)
+Using polyglot (0.3.3)
+Using treetop (1.4.15)
+Using mail (2.5.4)
+Using actionmailer (4.0.1)
+Using activemodel (4.0.1)
+Using activerecord-deprecated_finders (1.0.3)
+Using arel (4.0.1)
+Using activerecord (4.0.1)
+Using bundler (1.5.0.rc.1)
+Using coffee-script-source (1.6.3)
+Using execjs (2.0.2)
+Using coffee-script (2.2.0)
+Using thor (0.18.1)
+Using railties (4.0.1)
+Using coffee-rails (4.0.1)
+Using hike (1.2.3)
+Using jbuilder (1.5.2)
+Using jquery-rails (3.0.4)
+Using json (1.8.1)
+
+Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+    /Users/joegomez/.rvm/rubies/ruby-2.0.0-p247/bin/ruby extconf.rb 
+checking for pg_config... no
+No pg_config... trying anyway. If building fails, please try again with
+ --with-pg-config=/path/to/pg_config
+checking for libpq-fe.h... no
+Can't find the 'libpq-fe.h header
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/Users/joegomez/.rvm/rubies/ruby-2.0.0-p247/bin/ruby
+	--with-pg
+	--without-pg
+	--with-pg-config
+	--without-pg-config
+	--with-pg_config
+	--without-pg_config
+	--with-pg-dir
+	--without-pg-dir
+	--with-pg-include
+	--without-pg-include=${pg-dir}/include
+	--with-pg-lib
+	--without-pg-lib=${pg-dir}/
+
+
+Gem files will remain installed in /Users/joegomez/.bundler/tmp/8779/gems/pg-0.17.0 for inspection.
+Results logged to /Users/joegomez/.bundler/tmp/8779/gems/pg-0.17.0/ext/gem_make.out
+
+An error occurred while installing pg (0.17.0), and Bundler cannot continue.
+Make sure that `gem install pg -v '0.17.0'` succeeds before bundling.
+Joes-MacBook-Pro:Heroku_House joegomez$ gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/MacOS/bin/pg_config
+ 
+^[[A^[[B^[[AERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /Users/joegomez/.rvm/gems/ruby-2.0.0-p247 directory.
+Joes-MacBook-Pro:Heroku_House joegomez$ 
+Joes-MacBook-Pro:Heroku_House joegomez$ sudo gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/MacOS/bin/pg_config
+Building native extensions with: '--with-pg-config=/Applications/Postgres.app/Contents/MacOS/bin/pg_config'
+This could take a while...
+ERROR:  Error installing pg:
+	ERROR: Failed to build gem native extension.
+
+    /Users/joegomez/.rvm/rubies/ruby-2.0.0-p247/bin/ruby extconf.rb --with-pg-config=/Applications/Postgres.app/Contents/MacOS/bin/pg_config
+Using config values from /Applications/Postgres.app/Contents/MacOS/bin/pg_config
+sh: /Applications/Postgres.app/Contents/MacOS/bin/pg_config: No such file or directory
+sh: /Applications/Postgres.app/Contents/MacOS/bin/pg_config: No such file or directory
+checking for libpq-fe.h... no
+Can't find the 'libpq-fe.h header
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/Users/joegomez/.rvm/rubies/ruby-2.0.0-p247/bin/ruby
+	--with-pg
+	--without-pg
+	--with-pg-config
+	--with-pg-dir
+	--without-pg-dir
+	--with-pg-include
+	--without-pg-include=${pg-dir}/include
+	--with-pg-lib
+	--without-pg-lib=${pg-dir}/
+
+
+Gem files will remain installed in /Users/joegomez/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/pg-0.17.0 for inspection.
+Results logged to /Users/joegomez/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/pg-0.17.0/ext/gem_make.out
+Joes-MacBook-Pro:Heroku_House joegomez$ sudo gem install pg -- --with-pg-config=/Applications/Postgres93.app/Contents/MacOS/bin/pg_config
+Building native extensions with: '--with-pg-config=/Applications/Postgres93.app/Contents/MacOS/bin/pg_config'
+This could take a while...
+Successfully installed pg-0.17.0
+invalid options: -f fivefish
+(invalid options are ignored)
+Parsing documentation for pg-0.17.0
+unable to convert "\xCF" from ASCII-8BIT to UTF-8 for lib/pg_ext.bundle, skipping
+Installing ri documentation for pg-0.17.0
+1 gem installed
+Joes-MacBook-Pro:Heroku_House joegomez$ subl ~/.bash_profile
+Joes-MacBook-Pro:Heroku_House joegomez$ bundle install
+Resolving dependencies...
+Using rake (10.1.0)
+Using i18n (0.6.5)
+Using minitest (4.7.5)
+Using multi_json (1.8.2)
+Using atomic (1.1.14)
+Using thread_safe (0.1.3)
+Using tzinfo (0.3.38)
+Using activesupport (4.0.1)
+Using builder (3.1.4)
+Using erubis (2.7.0)
+Using rack (1.5.2)
+Using rack-test (0.6.2)
+Using actionpack (4.0.1)
+Using mime-types (1.25)
+Using polyglot (0.3.3)
+Using treetop (1.4.15)
+Using mail (2.5.4)
+Using actionmailer (4.0.1)
+Using activemodel (4.0.1)
+Using activerecord-deprecated_finders (1.0.3)
+Using arel (4.0.1)
+Using activerecord (4.0.1)
+Using bundler (1.5.0.rc.1)
+Using coffee-script-source (1.6.3)
+Using execjs (2.0.2)
+Using coffee-script (2.2.0)
+Using thor (0.18.1)
+Using railties (4.0.1)
+Using coffee-rails (4.0.1)
+Using hike (1.2.3)
+Using jbuilder (1.5.2)
+Using jquery-rails (3.0.4)
+Using json (1.8.1)
+Using pg (0.17.0)
+Using tilt (1.4.1)
+Using sprockets (2.10.0)
+Using sprockets-rails (2.0.1)
+Using rails (4.0.1)
+Using rails_serve_static_assets (0.0.1)
+Using rails_stdout_logging (0.0.3)
+Using rails_12factor (0.0.2)
+Using rdoc (3.12.2)
+Using sass (3.2.12)
+Using sass-rails (4.0.1)
+Using sdoc (0.3.20)
+Using sqlite3 (1.3.8)
+Using starter_generators (0.9.6)
+Using turbolinks (1.3.0)
+Using uglifier (2.3.1)
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Joes-MacBook-Pro:Heroku_House joegomez$ git push
+fatal: bad config file line 1 in .git/config
+Joes-MacBook-Pro:Heroku_House joegomez$ git status
+fatal: bad config file line 1 in .git/config
+Joes-MacBook-Pro:Heroku_House joegomez$ git init
+fatal: bad config file line 1 in /Users/joegomez/code/Heroku_House/.git/config
+Joes-MacBook-Pro:Heroku_House joegomez$ subl ~/Users/joegomez/code/Heroku_House/.git/config
+Joes-MacBook-Pro:Heroku_House joegomez$ git
+usage: git [--version] [--help] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+Joes-MacBook-Pro:Heroku_House joegomez$ ls
+Gemfile		README.md	Rakefile	bin		config.ru	lib		public		tmp
+Gemfile.lock	README.rdoc	app		config		db		log		test		vendor
+Joes-MacBook-Pro:Heroku_House joegomez$ rm -rf .git
+Joes-MacBook-Pro:Heroku_House joegomez$ git init
+Initialized empty Git repository in /Users/joegomez/code/Heroku_House/.git/
+Joes-MacBook-Pro:Heroku_House joegomez$ git add .
+Joes-MacBook-Pro:Heroku_House joegomez$ git commit -m "init commit"
+[master (root-commit) 58f731f] init commit
+ Committer: Joe Gomez <joegomez@Joes-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 101 files changed, 16942 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 Gemfile
+ create mode 100644 Gemfile.lock
+ create mode 100644 README.md
+ create mode 100644 README.rdoc
+ create mode 100644 Rakefile
+ create mode 100644 app/.DS_Store
+ create mode 100644 app/assets/.DS_Store
+ create mode 100644 app/assets/images/.DS_Store
+ create mode 100644 app/assets/images/.keep
+ create mode 100644 app/assets/images/CLEVERPILLAR.jpg
+ create mode 100644 app/assets/images/bad_advice_bears.jpg
+ create mode 100644 app/assets/images/freakeasy_logo_words.png
+ create mode 100644 app/assets/images/illMeasures_banner.jpg
+ create mode 100644 app/assets/javascripts/application.js
+ create mode 100644 app/assets/stylesheets/application.css
+ create mode 100644 app/controllers/application_controller.rb
+ create mode 100644 app/controllers/concerns/.keep
+ create mode 100644 app/controllers/djs_controller.rb
+ create mode 100644 app/controllers/mixes_controller.rb
+ create mode 100644 app/helpers/application_helper.rb
+ create mode 100644 app/mailers/.keep
+ create mode 100644 app/models/.keep
+ create mode 100644 app/models/concerns/.keep
+ create mode 100644 app/models/dj.rb
+ create mode 100644 app/models/mix.rb
+ create mode 100644 app/views/djs/edit.html.erb
+ create mode 100644 app/views/djs/index.html.erb
+ create mode 100644 app/views/djs/new.html.erb
+ create mode 100644 app/views/djs/show.html.erb
+ create mode 100644 app/views/layouts/application.html.erb
+ create mode 100644 app/views/mixes/edit.html.erb
+ create mode 100644 app/views/mixes/index.html.erb
+ create mode 100644 app/views/mixes/new.html.erb
+ create mode 100644 app/views/mixes/show.html.erb
+ create mode 100755 bin/bundle
+ create mode 100755 bin/rails
+ create mode 100755 bin/rake
+ create mode 100644 config.ru
+ create mode 100644 config/application.rb
+ create mode 100644 config/boot.rb
+ create mode 100644 config/database.yml
+ create mode 100644 config/environment.rb
+ create mode 100644 config/environments/development.rb
+ create mode 100644 config/environments/production.rb
+ create mode 100644 config/environments/test.rb
+ create mode 100644 config/initializers/backtrace_silencers.rb
+ create mode 100644 config/initializers/filter_parameter_logging.rb
+ create mode 100644 config/initializers/inflections.rb
+ create mode 100644 config/initializers/mime_types.rb
+ create mode 100644 config/initializers/secret_token.rb
+ create mode 100644 config/initializers/session_store.rb
+ create mode 100644 config/initializers/wrap_parameters.rb
+ create mode 100644 config/locales/en.yml
+ create mode 100644 config/routes.rb
+ create mode 100644 db/development.sqlite3
+ create mode 100644 db/migrate/20131114195130_create_djs.rb
+ create mode 100644 db/migrate/20131114195406_create_mixes.rb
+ create mode 100644 db/schema.rb
+ create mode 100644 db/seeds.rb
+ create mode 100644 lib/assets/.keep
+ create mode 100644 lib/tasks/.keep
+ create mode 100644 log/.keep
+ create mode 100644 log/development.log
+ create mode 100644 public/404.html
+ create mode 100644 public/422.html
+ create mode 100644 public/500.html
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/robots.txt
+ create mode 100644 test/controllers/.keep
+ create mode 100644 test/fixtures/.keep
+ create mode 100644 test/helpers/.keep
+ create mode 100644 test/integration/.keep
+ create mode 100644 test/mailers/.keep
+ create mode 100644 test/models/.keep
+ create mode 100644 test/test_helper.rb
+ create mode 100644 tmp/cache/assets/development/sprockets/13fe41fee1fe35b49d145bcc06610705
+ create mode 100644 tmp/cache/assets/development/sprockets/18c517f4ec02cd64d6985ccf1b715ca6
+ create mode 100644 tmp/cache/assets/development/sprockets/2644371fda02d321f0bded447ab8062a
+ create mode 100644 tmp/cache/assets/development/sprockets/2ea629e5878c42c7cbb5ee2bc63acb14
+ create mode 100644 tmp/cache/assets/development/sprockets/2f5173deea6c795b8fdde723bb4b63af
+ create mode 100644 tmp/cache/assets/development/sprockets/357970feca3ac29060c1e3861e2c0953
+ create mode 100644 tmp/cache/assets/development/sprockets/3794912444ecc423810319f901a5912d
+ create mode 100644 tmp/cache/assets/development/sprockets/6154dc5c3b39fa34eff5f035569eebbd
+ create mode 100644 tmp/cache/assets/development/sprockets/7da5528b7607d0436be9ae0eb5c6d326
+ create mode 100644 tmp/cache/assets/development/sprockets/9467c80d0df32455d0da046c12640ba9
+ create mode 100644 tmp/cache/assets/development/sprockets/9c4d0184499cd6ecf6a16334a47309b4
+ create mode 100644 tmp/cache/assets/development/sprockets/b67938d67ad605afb1b23b29c0888a69
+ create mode 100644 tmp/cache/assets/development/sprockets/b907381133cccb7dc80c8a8dea8fe09c
+ create mode 100644 tmp/cache/assets/development/sprockets/b93da0e6096e83aa46fe4a171dca0105
+ create mode 100644 tmp/cache/assets/development/sprockets/bb11fbdf9056233c5a61beb94b036f15
+ create mode 100644 tmp/cache/assets/development/sprockets/bbc44d26065c11dcb7df21f929236a23
+ create mode 100644 tmp/cache/assets/development/sprockets/cffd775d018f68ce5dba1ee0d951a994
+ create mode 100644 tmp/cache/assets/development/sprockets/d4b84100f76822ef720171c7c314b28a
+ create mode 100644 tmp/cache/assets/development/sprockets/d771ace226fc8215a3572e0aa35bb0d6
+ create mode 100644 tmp/cache/assets/development/sprockets/e7442c5a7e25e9eac91da8ec30ac28aa
+ create mode 100644 tmp/cache/assets/development/sprockets/f7cbd26ba1d28d48de824f0e94586655
+ create mode 100644 tmp/cache/assets/development/sprockets/fc851ecb167ff908c5dc1b70caddd683
+ create mode 100644 tmp/cache/assets/development/sprockets/fc8c4c9b8bbb349283c36b24028e8a8c
+ create mode 100644 vendor/assets/javascripts/.keep
+ create mode 100644 vendor/assets/stylesheets/.keep
+Joes-MacBook-Pro:Heroku_House joegomez$ subl .git
+Joes-MacBook-Pro:Heroku_House joegomez$ git remote add origin https://github.com/JoeyGo23/House.git
+Joes-MacBook-Pro:Heroku_House joegomez$ git push -u origin master
+Counting objects: 109, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (95/95), done.
+Writing objects: 100% (109/109), 245.37 KiB | 0 bytes/s, done.
+Total 109 (delta 15), reused 0 (delta 0)
+To https://github.com/JoeyGo23/House.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Joes-MacBook-Pro:Heroku_House joegomez$ heroku create 
+Creating desolate-earth-1996... done, stack is cedar
+http://desolate-earth-1996.herokuapp.com/ | git@heroku.com:desolate-earth-1996.git
+Git remote heroku added
+Joes-MacBook-Pro:Heroku_House joegomez$ git push heroku
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+No refs in common and none specified; doing nothing.
+Perhaps you should specify a branch such as 'master'.
+^[[A
+^CKilled by signal 2.
+
+Joes-MacBook-Pro:Heroku_House joegomez$ git push heroku master
+Counting objects: 109, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (95/95), done.
+Writing objects: 100% (109/109), 245.37 KiB | 0 bytes/s, done.
+Total 109 (delta 15), reused 0 (delta 0)
+
+-----> Removing .DS_Store files
+-----> Ruby app detected
+-----> Compiling Ruby/Rails
+-----> Using Ruby version: ruby-2.0.0
+-----> Installing dependencies using Bundler version 1.3.2
+       New app detected loading default bundler cache
+       Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin --deployment
+       Fetching gem metadata from https://rubygems.org/..........
+       Fetching gem metadata from https://rubygems.org/..
+       Using rake (10.1.0)
+       Using i18n (0.6.5)
+       Using minitest (4.7.5)
+       Installing multi_json (1.8.2)
+       Using atomic (1.1.14)
+       Using thread_safe (0.1.3)
+       Installing tzinfo (0.3.38)
+       Installing activesupport (4.0.1)
+       Using builder (3.1.4)
+       Using erubis (2.7.0)
+       Using rack (1.5.2)
+       Using rack-test (0.6.2)
+       Installing actionpack (4.0.1)
+       Using mime-types (1.25)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.15)
+       Using mail (2.5.4)
+       Installing actionmailer (4.0.1)
+       Installing activemodel (4.0.1)
+       Using activerecord-deprecated_finders (1.0.3)
+       Installing arel (4.0.1)
+       Installing activerecord (4.0.1)
+       Using coffee-script-source (1.6.3)
+       Installing execjs (2.0.2)
+       Using coffee-script (2.2.0)
+       Using thor (0.18.1)
+       Installing railties (4.0.1)
+       Installing coffee-rails (4.0.1)
+       Using hike (1.2.3)
+       Installing jbuilder (1.5.2)
+       Using jquery-rails (3.0.4)
+       Installing json (1.8.1)
+       Using pg (0.17.0)
+       Using bundler (1.3.2)
+       Using tilt (1.4.1)
+       Using sprockets (2.10.0)
+       Installing sprockets-rails (2.0.1)
+       Installing rails (4.0.1)
+       Using rails_serve_static_assets (0.0.1)
+       Installing rails_stdout_logging (0.0.3)
+       Using rails_12factor (0.0.2)
+       Using rdoc (3.12.2)
+       Installing sass (3.2.12)
+       Installing sass-rails (4.0.1)
+       Using sdoc (0.3.20)
+       Installing starter_generators (0.9.6)
+       Using turbolinks (1.3.0)
+       Installing uglifier (2.3.1)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Bundle completed (50.72s)
+       Cleaning up the bundler cache.
+       Removing coffee-rails (4.0.0)
+       Removing sass-rails (4.0.0)
+       Removing arel (4.0.0)
+       Removing actionpack (3.2.14)
+       Removing unicorn (4.6.3)
+       Removing arel (3.0.2)
+       Removing rails_stdout_logging (0.0.2)
+       Removing activemodel (4.0.0)
+       Removing railties (4.0.0)
+       Removing execjs (2.0.1)
+       Removing nokogiri (1.6.0)
+       Removing rails (3.2.14)
+       Removing rails (4.0.0)
+       Removing uglifier (2.2.1)
+       Removing activerecord (4.0.0)
+       Removing activeresource (3.2.14)
+       Removing rack (1.4.5)
+       Removing raindrops (0.12.0)
+       Removing coffee-rails (3.2.2)
+       Removing sprockets (2.2.2)
+       Removing bcrypt-ruby (3.0.1)
+       Removing activemodel (3.2.14)
+       Removing actionmailer (4.0.0)
+       Removing rack-ssl (1.3.3)
+       Removing builder (3.0.4)
+       Removing sass-rails (3.2.6)
+       Removing railties (3.2.14)
+       Removing pg (0.16.0)
+       Removing activerecord (3.2.14)
+       Removing tzinfo (0.3.37)
+       Removing jbuilder (1.5.1)
+       Removing sass (3.2.10)
+       Removing actionpack (4.0.0)
+       Removing actionmailer (3.2.14)
+       Removing rack-cache (1.2)
+       Removing sprockets-rails (2.0.0)
+       Removing json (1.8.0)
+       Removing mini_portile (0.5.1)
+       Removing multi_json (1.8.0)
+       Removing puma (2.6.0)
+       Removing journey (1.0.4)
+       Removing activesupport (4.0.0)
+       Removing activesupport (3.2.14)
+       Removing kgio (2.8.1)
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       I, [2013-11-19T19:53:02.176570 #1117]  INFO -- : Writing /tmp/build_bbfac741-2771-4a3e-9c2f-df0b7a318833/public/assets/CLEVERPILLAR-0c83cbee30aab7df7a0ef5977570a07e.jpg
+       I, [2013-11-19T19:53:02.184570 #1117]  INFO -- : Writing /tmp/build_bbfac741-2771-4a3e-9c2f-df0b7a318833/public/assets/bad_advice_bears-7ae743336e6cd39d0c54ea1c0d7d96c2.jpg
+       I, [2013-11-19T19:53:02.239877 #1117]  INFO -- : Writing /tmp/build_bbfac741-2771-4a3e-9c2f-df0b7a318833/public/assets/freakeasy_logo_words-90d56a72dfd4ba0d46989df4649d5d06.png
+       I, [2013-11-19T19:53:02.244936 #1117]  INFO -- : Writing /tmp/build_bbfac741-2771-4a3e-9c2f-df0b7a318833/public/assets/illMeasures_banner-78765ba47ba574b0f90aeda8dc3314f2.jpg
+       I, [2013-11-19T19:53:11.021384 #1117]  INFO -- : Writing /tmp/build_bbfac741-2771-4a3e-9c2f-df0b7a318833/public/assets/application-2dd3195ede89b8d0cd5e16ee355e4d59.js
+       I, [2013-11-19T19:53:11.132052 #1117]  INFO -- : Writing /tmp/build_bbfac741-2771-4a3e-9c2f-df0b7a318833/public/assets/application-a71c7e61c209fe590198933d86c855cc.css
+       Asset precompilation completed (11.81s)
+       Cleaning assets
+-----> Discovering process types
+       Procfile declares types -> (none)
+       Default types for Ruby  -> console, rake, web, worker
+
+-----> Compiled slug size: 35.4MB
+-----> Launching... done, v5
+       http://desolate-earth-1996.herokuapp.com deployed to Heroku
+
+To git@heroku.com:desolate-earth-1996.git
+ * [new branch]      master -> master
+Joes-MacBook-Pro:Heroku_House joegomez$ heroku run db:migrate
+Running `db:migrate` attached to terminal... up, run.6573
+bash: db:migrate: command not found
+Joes-MacBook-Pro:Heroku_House joegomez$ heroku run rake db:migrate
+Running `rake db:migrate` attached to terminal... up, run.6607
+Migrating to CreateDjs (20131114195130)
+==  CreateDjs: migrating ======================================================
+-- create_table(:djs)
+   -> 0.0552s
+==  CreateDjs: migrated (0.0554s) =============================================
+
+Migrating to CreateMixes (20131114195406)
+==  CreateMixes: migrating ====================================================
+-- create_table(:mixes)
+   -> 0.0457s
+==  CreateMixes: migrated (0.0460s) ===========================================
+
+Joes-MacBook-Pro:Heroku_House joegomez$ git init
+Reinitialized existing Git repository in /Users/joegomez/code/Heroku_House/.git/
+Joes-MacBook-Pro:Heroku_House joegomez$ git status
+# On branch master
+nothing to commit, working directory clean
+Joes-MacBook-Pro:Heroku_House joegomez$ git add .
+Joes-MacBook-Pro:Heroku_House joegomez$ git status
+# On branch master
+nothing to commit, working directory clean
+Joes-MacBook-Pro:Heroku_House joegomez$ 
